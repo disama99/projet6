@@ -1,0 +1,109 @@
+.menu {
+  margin-bottom: 0;
+}
+.menu-title{
+  font-size: 24px;
+}
+.menu button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1023px;
+  height: 52px;
+  margin-top: 20px;
+  background-color: #FF6060;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 20px;
+  margin-left: 175px;
+  z-index: 3;
+  position: relative;
+}
+.menu p {
+  position: relative;
+  color: #FF6060;
+  margin: 0 auto;
+  left: 175px;
+  position: relative;
+}
+.apropos {
+  margin: 0 auto;
+  max-width: 1023px;
+  padding-right: 350px;
+}
+
+.menu-icon {
+  display: inline-block;
+  transition-property: transform;
+  transition-duration: 1s;
+  cursor: pointer;
+  margin-right: 10px;
+
+  &.expanded {
+    transform: rotate(360deg);
+  }
+
+  &:not(.expanded) {
+    transform: rotate(0deg);
+    /* Inverse la rotation lorsque la classe expanded n'est pas appliquée */
+  }
+}
+
+.menu p.contenu {
+  width: 1003px;
+  padding: 10px;
+  background-color: #F6F6F6;
+  border-radius: 0 0 5px 5px;
+  color: #FF6060;
+  margin: 0 auto;
+  z-index: 2;
+  bottom: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .apropos {
+    margin: 0 auto;
+    max-width: 335px; 
+    padding-right: 0;
+    padding-bottom: 30px;
+    padding-left: 20px;
+  }
+
+  .menu button {
+    width: 310px;
+    height: 30px;
+    margin: 0 auto;
+    font-size: 13px; 
+    margin-top: 20px; 
+    margin-left: 0;
+    
+  }
+  .menu-title{
+    font-size: 13px;
+    margin-left: 10px;
+  }
+  .menu p.contenu{
+    margin: 0 auto;
+    width: 290px; 
+    position: relative;
+    left: 0;
+    right: 0;
+    padding-top: 20px;
+
+  }
+  .menu {
+    max-width: 310px;
+  }
+ .menu-icon{
+  padding-right: 10px;
+ }
+ .menu p.contenu {
+  display: none; /* Masquer les détails par défaut */
+}
+
+/* Styles pour afficher les détails lorsque l'icône est cliquée */
+.menu.expanded p.contenu {
+  display: block; /* Afficher les détails lorsque l'icône est cliquée */
+}
+}

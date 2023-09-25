@@ -1,0 +1,37 @@
+
+.Error h1 p a{
+    margin: 0;
+    padding: 0;
+}
+.Error{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+.Error h1{
+    font-size: 288px;
+    color: #e74c3c;
+    padding-bottom: 190px;
+  }
+  
+ .Error p {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #e74c3c;
+    position: relative;
+    bottom: 220px;
+}
+
+
+  .Error a {
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #e74c3c;
+    font-size: 18px;
+    text-decoration: underline;
+  }

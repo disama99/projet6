@@ -1,0 +1,62 @@
+.pheader {
+  max-width: 1240px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.pheader nav ul {
+  list-style: none;
+  position: relative;
+  right: 0;
+  padding: 0;
+}
+
+.pheader nav ul li a {
+  color: #ff6060;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+
+.pheader nav ul li {
+  display: inline-block;
+  margin-left: 57px;
+}
+
+
+.active-link {
+  border-bottom: 1px solid #ff6060;
+}
+
+.Logo {
+  margin-bottom: 20px;
+  margin-top: 15px;
+}
+
+@media screen and (max-width: 768px) {
+  .pheader {
+  
+  }
+
+  .Logo img {
+    width: 75%;
+    margin-left: 20px;
+  }
+
+  .pheader nav {
+    width: 60%;
+    margin-left: 110px;
+  }
+
+  .pheader nav ul li {
+
+    margin-left: 15px;
+  }
+
+  .pheader nav ul li a {
+    font-size: 12px;
+  }
+
+}

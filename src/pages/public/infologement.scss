@@ -1,0 +1,336 @@
+.Infologement {
+    color: #FF6060;
+
+    .pictures {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 1240px;
+        height: 415px;
+        margin: 0 auto;
+    }
+
+    .slide {
+        border-radius: 0.5rem;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .pictures .nav_arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1;
+        cursor: pointer;
+    }
+
+    .pictures .nav_arrowleft {
+        left: 0px;
+    }
+
+    .pictures .nav_arrowright {
+        right: 0px;
+    }
+
+    .indicators {
+        position: absolute;
+        bottom: 20px;
+        transform: translateX(-50%);
+        color: white;
+        padding: 5px 10px;
+    }
+
+    .spacement1 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1240px;
+        margin: 0 auto;
+    }
+
+    h2 {
+        font-size: 36px;
+    }
+
+    .host {
+        display: flex;
+        align-items: center;
+
+        p {
+            font-size: 18px;
+            max-width: 15%;
+            padding-bottom: 0;
+
+        }
+
+        .hostPicture {
+            border-radius: 75px;
+            height: 64px;
+        }
+    }
+
+    p {
+        font-size: 18px;
+        max-width: 1240px;
+        margin: 0 auto;
+        padding-bottom: 20px;
+    }
+
+    .spacement {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1240px;
+        margin: 0 auto;
+
+        .tags {
+            display: flex;
+            gap: 10px;
+            list-style: none;
+            flex-wrap: wrap;
+            margin: 0;
+            padding-left: 0;
+
+            .tag {
+                background-color: #FF6060;
+                color: white;
+                padding: 3px 9px;
+                border-radius: 10px;
+                margin: 3px 0;
+            }
+        }
+
+        .rating {
+            display: flex;
+            position: relative;
+            right: 150px;
+            width: 36px;
+            height: 36px;
+            gap: 5px;
+        }
+
+    }
+
+    .details-container {
+        display: flex;
+        font-size: 18px;
+        gap: 80px;
+        align-items: flex-start;
+        max-width: 1240px;
+        margin: 0 auto;
+        padding-top: 20px;
+
+        h3 {
+            margin-left: 10px;
+        }
+
+        .description,
+        .equipments {
+            display: flex;
+            align-items: flex-start;
+            height: 52px;
+            justify-content: space-between;
+            align-items: center;
+            width: 582px;
+            border-radius: 10px;
+            border: 1px solid #FF6060;
+            background-color: #FF6060;
+            color: white;
+            z-index: 3;
+            position: relative;
+            margin: 0;
+
+            h3 {
+                margin-left: 20px;
+            }
+        }
+
+        .detail-button {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+
+            img {
+                width: 32px;
+                height: 32px;
+                margin-right: 10px;
+                padding-top: 10px;
+            }
+        }
+
+        .details-content {
+            max-width: 582px;
+            background-color: #F6F6F6;
+            transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+            overflow: hidden;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            padding: 20px;
+            z-index: 2;
+            position: relative;
+            bottom: 10px;
+
+            ul {
+                margin: 0;
+                padding: 0;
+            }
+
+            ul li {
+                list-style-type: none;
+            }
+        }
+    }
+
+    .details-content.open {
+        opacity: 1;
+        max-height: 1000px;
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .pictures .nav_arrowleft,
+    .pictures .nav_arrowright {
+        width: 40px;
+        height: 40px;
+    }
+
+    .spacement1 {
+        padding: 10px;
+    }
+
+    .Infologement h2 {
+        font-size: 18px;
+        margin-left: 10px;
+        margin-bottom: 0px;
+    }
+
+    .details-container {
+        flex-direction: column;
+    }
+
+    .Infologement {
+        .pictures .nav_arrowleft {
+            left: 0;
+        }
+
+        .pictures .nav_arrowright {
+            right: 0;
+        }
+
+        .slide {
+            
+            width: 105%;
+        }
+
+        .pictures {
+            width: 85%;
+            height: 240px;
+        }
+
+        .indicators {
+            transform: unset;
+            display: none;
+        }
+
+        .host {
+            margin-right: 10px;
+            position: relative;
+            top: 150px;
+            gap: 10px;
+        }
+
+        .host p {
+            font-size: 12px;
+            max-width:20px ;
+            margin-right: 20px;
+        }
+
+        .host .hostPicture {
+            height: 32px;
+        }
+
+        p {
+            font-size: 14px;
+            margin-right: 25px;
+            margin-left: 20px;
+        }
+
+        .spacement {
+            flex-direction: column;
+            max-width: 389px;
+            align-items: start;
+            margin-left: 20px;
+
+            .rating {
+                width: 36px;
+                height: 36px;
+                padding-top: 20px;
+                position: relative;
+                top: 15px;
+                right: 0;
+
+                img {
+                    height: 18px;
+                }
+
+            }
+
+        }
+    }
+
+    .Infologement .details-container .description,
+    .Infologement .details-container .equipments {
+        width: 335px;
+        height: 30px;
+        margin-left: 25px;
+    }
+
+    .Infologement .details-container {
+        gap: 30px;
+        padding-bottom: 35px;
+    }
+
+    .Infologement .details-container .description h3,
+    .Infologement .details-container .equipments h3 {
+        font-size: 13px;
+    }
+
+    .Infologement .details-container .detail-button img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .Infologement .details-container .details-content {
+        margin-left: 25px;
+        max-width: 298px;
+    }
+
+    .Infologement .spacement .tags {
+        padding-right: 10px;
+        position: relative;
+       
+    }
+    .description,
+    .equipments {
+        width: 100%;
+    }
+
+    .spacement .tags {
+        margin-top: 10px; 
+        margin-left: 0; 
+    }
+
+    .spacement .tags .tag {
+        white-space: nowrap; 
+        overflow: hidden;
+        text-overflow: ellipsis; 
+    }
+
+}
